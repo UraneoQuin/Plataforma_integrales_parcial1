@@ -2,8 +2,8 @@
 
 Plataforma web interactiva para estudiar cálculo integral. Proyecto semestral de la asignatura Cálculo Integral, Tecnología en Desarrollo de Software, Universidad Tecnológica de Pereira (2026-II).
 
-- **Sitio publicado:** `https://TU-USUARIO.github.io/calculo-integral-utp/`  *(reemplazar)*
-- **Autor:** NOMBRE APELLIDO · código 000000  *(reemplazar)*
+- **Sitio publicado:** `https://UraneoQuin.github.io/Plataforma_integrales_parcial1.utp/`  
+- **Autor:** Juan David Quintero Uran · código 1089381691
 
 ## Estado por fase
 
