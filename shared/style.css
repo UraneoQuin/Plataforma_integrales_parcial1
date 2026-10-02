@@ -1,0 +1,24 @@
+:root{--bg:#fbfaf6;--fg:#1c2433;--mut:#5d6677;--ac:#1d4ed8;--ac2:#b45309;--card:#fff;--bd:#d8d6cc}
+@media(prefers-color-scheme:dark){:root{--bg:#111722;--fg:#e7eaf0;--mut:#9ba5b6;--ac:#7aa2ff;--ac2:#f0b35a;--card:#192131;--bd:#2b364a}}
+*{box-sizing:border-box}
+body{margin:0;font:17px/1.65 Georgia,'Times New Roman',serif;background:var(--bg);color:var(--fg)}
+header,main,footer{max-width:960px;margin:auto;padding:1rem}
+header{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:.5rem;border-bottom:2px solid var(--fg)}
+header a{font:600 1rem system-ui,sans-serif;text-decoration:none;color:var(--fg)}
+h1{font-size:clamp(1.8rem,5vw,2.8rem);line-height:1.15;margin:.6rem 0}
+h2{margin-top:2rem}
+a{color:var(--ac)} a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--ac2);outline-offset:2px}
+.lead{max-width:65ch;color:var(--mut)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:.8rem;margin:1rem 0}
+.card{display:block;border:1px solid var(--bd);border-left:5px solid var(--ac);background:var(--card);padding:.7rem .9rem;text-decoration:none;color:var(--fg);font-family:system-ui,sans-serif}
+.card.soon{border-left-color:var(--bd);color:var(--mut)}
+.card b{display:block}.card small{color:var(--mut)}
+.ex,.viz{background:var(--card);border:1px solid var(--bd);padding:1rem;margin:1.2rem 0}
+.ex>h3{margin:0 0 .4rem;font-size:1.05rem;color:var(--ac2)}
+.ctl{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;font-family:system-ui,sans-serif;font-size:.95rem}
+input,select{padding:.3rem .4rem;border:1px solid var(--bd);border-radius:4px;background:var(--bg);color:var(--fg);max-width:100%;font:inherit}
+.plot{width:100%;height:360px}.res{font:.9rem ui-monospace,monospace;margin-top:.5rem;overflow-wrap:anywhere}
+.katex-display{overflow-x:auto;overflow-y:hidden;padding:.2rem 0}
+nav.pn{display:flex;justify-content:space-between;gap:1rem;font-family:system-ui,sans-serif;margin-top:2rem}
+.soonmsg{padding:3rem 1rem;text-align:center;border:2px dashed var(--bd);font-size:1.3rem}
+footer{color:var(--mut);font:.85rem system-ui,sans-serif}

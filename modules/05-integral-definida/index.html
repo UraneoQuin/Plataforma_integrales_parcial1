@@ -1,0 +1,10 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Integral definida y área · Cálculo Integral UTP</title><link rel="stylesheet" href="../../shared/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>
+<script defer src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script><script defer src="../../shared/app.js"></script></head><body>
+<header><a href="../../index.html">Cálculo Integral · UTP</a><span>Tecnología en Desarrollo de Software · 2026-II</span></header><main><h1>5. Integral definida y área</h1><h2>Teoría</h2><p><b>Teorema Fundamental del Cálculo:</b> si $F'=f$ en $[a,b]$, entonces</p>
+$$\int_a^b f(x)\,dx=F(b)-F(a)$$
+<p>El <b>área</b> no es la integral con signo: $\text{Área}=\int_a^b|f(x)|\,dx$. Entre dos curvas: $\int_a^b|f(x)-g(x)|\,dx$. Cambie $f$, $g$, $a$ y $b$ en el visualizador (ej.: $f=2x$, $g=x^2$).</p><h2>Visualizador interactivo</h2><div class="viz" data-mode="area" data-f="2x" data-g="x^2" data-a="0" data-b="2" data-n="0"></div><h2>Ejemplos resueltos</h2><div class="ex"><h3>Ejemplo 1: $\int_0^2(3x^2-2x+1)\,dx$</h3>$$F(x)=x^3-x^2+x\ \Rightarrow\ F(2)-F(0)=(8-4+2)-0=6$$</div><div class="ex"><h3>Ejemplo 2: área entre $f(x)=2x$ y $g(x)=x^2$</h3><p>Intersecciones: $x^2=2x\Rightarrow x=0,\ x=2$. En $(0,2)$, $2x\ge x^2$.</p>
+$$A=\int_0^2(2x-x^2)\,dx=\Big[x^2-\tfrac{x^3}{3}\Big]_0^2=4-\tfrac83=\tfrac43$$</div><nav class="pn"><a href="../04-simpson/index.html">← Regla de Simpson</a><a href="../06-integracion-directa/index.html">Integración directa →</a></nav></main><footer>Universidad Tecnológica de Pereira · Departamento de Matemáticas. Proyecto colaborativo, Fase 1.</footer></body></html>

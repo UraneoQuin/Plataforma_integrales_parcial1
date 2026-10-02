@@ -1,0 +1,12 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Regla del Punto Medio · Cálculo Integral UTP</title><link rel="stylesheet" href="../../shared/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>
+<script defer src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script><script defer src="../../shared/app.js"></script></head><body>
+<header><a href="../../index.html">Cálculo Integral · UTP</a><span>Tecnología en Desarrollo de Software · 2026-II</span></header><main><h1>3. Regla del Punto Medio</h1><h2>Teoría</h2><p>En cada subintervalo se evalúa $f$ en su punto medio y se forma un rectángulo:</p>
+$$M_n=\Delta x\sum_{i=1}^{n}f(\bar x_i),\qquad \bar x_i=\frac{x_{i-1}+x_i}{2},\quad \Delta x=\frac{b-a}{n}$$
+<p>Suele ser más precisa que el trapecio: el error de $M_n$ es aproximadamente la mitad del de $T_n$ y de signo contrario.</p><h2>Visualizador interactivo</h2><div class="viz" data-mode="mid" data-f="x^2" data-g="" data-a="0" data-b="2" data-n="4"></div><h2>Ejemplos resueltos</h2><div class="ex"><h3>Ejemplo 1: $\int_0^2x^2dx$, $n=4$</h3><p>Puntos medios $0.25,\,0.75,\,1.25,\,1.75$ con $f=0.0625,\,0.5625,\,1.5625,\,3.0625$.</p>
+$$M_4=0.5\,(5.25)=2.625\quad(\text{exacto }2.6667)$$</div><div class="ex"><h3>Ejemplo 2: $\int_0^{\pi/2}\cos x\,dx$, $n=4$</h3><p>$\Delta x=\pi/8$; puntos medios $\pi/16,\,3\pi/16,\,5\pi/16,\,7\pi/16$.</p>
+$$M_4=\frac{\pi}{8}(0.9808+0.8315+0.5556+0.1951)=\frac{\pi}{8}(2.5629)\approx1.0065$$
+<p>Exacto $1$; error $\approx0.0065$.</p></div><nav class="pn"><a href="../02-trapecio/index.html">← Regla del Trapecio</a><a href="../04-simpson/index.html">Regla de Simpson →</a></nav></main><footer>Universidad Tecnológica de Pereira · Departamento de Matemáticas. Proyecto colaborativo, Fase 1.</footer></body></html>

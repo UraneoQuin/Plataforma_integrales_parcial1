@@ -1,0 +1,12 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Regla del Trapecio · Cálculo Integral UTP</title><link rel="stylesheet" href="../../shared/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>
+<script defer src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script><script defer src="../../shared/app.js"></script></head><body>
+<header><a href="../../index.html">Cálculo Integral · UTP</a><span>Tecnología en Desarrollo de Software · 2026-II</span></header><main><h1>2. Regla del Trapecio</h1><h2>Teoría</h2><p>Se reemplaza cada rectángulo por un trapecio que une los puntos $(x_{i-1},f(x_{i-1}))$ y $(x_i,f(x_i))$. El área de cada trapecio es $\frac{\Delta x}{2}\,[f(x_{i-1})+f(x_i)]$; al sumar, los nodos interiores aparecen dos veces:</p>
+$$T_n=\frac{\Delta x}{2}\Big[f(x_0)+2\sum_{i=1}^{n-1}f(x_i)+f(x_n)\Big],\qquad \Delta x=\frac{b-a}{n}$$<h2>Visualizador interactivo</h2><div class="viz" data-mode="trap" data-f="x^2" data-g="" data-a="0" data-b="2" data-n="4"></div><h2>Ejemplos resueltos</h2><div class="ex"><h3>Ejemplo 1: $\int_0^2x^2dx$, $n=4$</h3><p>$\Delta x=0.5$, $f(x_i)=0,\,0.25,\,1,\,2.25,\,4$.</p>
+$$T_4=\frac{0.5}{2}\big[0+2(0.25+1+2.25)+4\big]=0.25\cdot11=2.75$$
+<p>Exacto $2.6667$; error $\approx0.0833$ (sobreestima porque $x^2$ es convexa).</p></div><div class="ex"><h3>Ejemplo 2: $\int_0^{\pi/2}\sin x\,dx$, $n=4$</h3><p>$\Delta x=\pi/8$; $\sin x_i=0,\,0.3827,\,0.7071,\,0.9239,\,1$.</p>
+$$T_4=\frac{\pi}{16}\big[0+2(0.3827+0.7071+0.9239)+1\big]=\frac{\pi}{16}(5.0273)\approx0.9871$$
+<p>Exacto $1$; error $\approx0.0129$ (subestima porque $\sin x$ es cóncava).</p></div><nav class="pn"><a href="../01-riemann/index.html">← Sumas de Riemann</a><a href="../03-punto-medio/index.html">Regla del Punto Medio →</a></nav></main><footer>Universidad Tecnológica de Pereira · Departamento de Matemáticas. Proyecto colaborativo, Fase 1.</footer></body></html>

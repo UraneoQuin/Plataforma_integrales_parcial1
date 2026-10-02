@@ -1,0 +1,15 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sumas de Riemann · Cálculo Integral UTP</title><link rel="stylesheet" href="../../shared/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>
+<script defer src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script><script defer src="../../shared/app.js"></script></head><body>
+<header><a href="../../index.html">Cálculo Integral · UTP</a><span>Tecnología en Desarrollo de Software · 2026-II</span></header><main><h1>1. Sumas de Riemann</h1><h2>Teoría</h2><p>Dividimos $[a,b]$ en $n$ subintervalos de ancho $\Delta x=\frac{b-a}{n}$ y sumamos áreas de rectángulos:</p>
+$$L_n=\sum_{i=0}^{n-1}f(x_i)\Delta x,\qquad R_n=\sum_{i=1}^{n}f(x_i)\Delta x,\qquad M_n=\sum_{i=1}^{n}f(\bar x_i)\Delta x,\ \ \bar x_i=\tfrac{x_{i-1}+x_i}{2}$$
+<p>Al aumentar $n$, las tres sumas convergen a $\int_a^b f(x)\,dx$.</p><h2>Visualizador interactivo</h2><div class="viz" data-mode="riemann" data-f="x^2" data-g="" data-a="0" data-b="2" data-n="4"></div><h2>Ejemplos resueltos</h2><div class="ex"><h3>Ejemplo 1: $f(x)=x^2$ en $[0,2]$, $n=4$</h3><p>$\Delta x=0.5$; nodos $0,\,0.5,\,1,\,1.5,\,2$ con $f=0,\,0.25,\,1,\,2.25,\,4$.</p>
+$$L_4=0.5(0+0.25+1+2.25)=1.75,\qquad R_4=0.5(0.25+1+2.25+4)=3.75$$
+<p>Puntos medios $0.25,\,0.75,\,1.25,\,1.75$: $M_4=0.5(0.0625+0.5625+1.5625+3.0625)=2.625$.</p>
+<p>Valor exacto: $\int_0^2x^2dx=\tfrac83\approx2.6667$. $L_4$ subestima, $R_4$ sobreestima y $M_4$ es la más cercana.</p></div><div class="ex"><h3>Ejemplo 2: $\int_1^3\frac1x\,dx$ con $n=5$</h3><p>$\Delta x=0.4$; nodos $1,\,1.4,\,1.8,\,2.2,\,2.6,\,3$.</p>
+$$L_5=0.4(1+0.7143+0.5556+0.4545+0.3846)\approx1.2436$$
+$$R_5=0.4(0.7143+0.5556+0.4545+0.3846+0.3333)\approx0.9769$$
+<p>Puntos medios $1.2,\,1.6,\,2,\,2.4,\,2.8$: $M_5=0.4(0.8333+0.625+0.5+0.4167+0.3571)\approx1.0929$. Exacto: $\ln3\approx1.0986$.</p></div><nav class="pn"><span></span><a href="../02-trapecio/index.html">Regla del Trapecio →</a></nav></main><footer>Universidad Tecnológica de Pereira · Departamento de Matemáticas. Proyecto colaborativo, Fase 1.</footer></body></html>
